@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio of Basa Divakar Reddy — Full Stack Developer from Visakhapatnam, India. Building AI-powered tools and creative web experiences." />
+  <meta name="keywords" content="Basa Divakar Reddy, Full Stack Developer, React, Node.js, AI, Visakhapatnam" />
+  <meta property="og:title" content="Basa Divakar Reddy — Full Stack Developer" />
+  <meta property="og:description" content="Building intelligent web apps at the intersection of AI and full-stack development." />
+  <meta property="og:type" content="website" />
+  <title>Basa Divakar Reddy — Full Stack Developer</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
+  <!-- Devicons for tech stack icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" />
+
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+</head>
+<body>
+
+  <div id="cursor"></div>
+  <div id="cursor-trail"></div>
+  <div id="cursor-dot"></div>
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-logo"><span class="bracket">&lt;</span>BDR<span class="bracket">/&gt;</span></div>
+    <div class="nav-links">
+      <a href="#hero">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="nav-right">
+      <button id="theme-toggle" class="theme-btn" aria-label="Toggle theme">☀️</button>
+      <button class="nav-menu-btn" id="menuBtn" aria-label="Toggle menu">☰</button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#hero">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#education">Education</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+  <!-- ===== HERO ===== -->
+  <section id="hero">
+    <div class="hero-inner">
+      <!-- Left: Text -->
+      <div class="hero-left">
+        <p class="hero-greeting"><span class="accent-cyan">Hello, I'm</span></p>
+        <h1 class="hero-title">
+          <span class="line1">Basa Divakar</span>
+          <span class="line2" id="glitchText">Reddy</span>
+        </h1>
+        <p class="hero-role">I'm a <span class="role-text" id="roleTyper"></span><span class="cursor-blink">|</span></p>
+        <p class="hero-sub">
+          I turn complex problems into elegant, intelligent web experiences —
+          blending full-stack engineering with AI to build things that actually matter.
+        </p>
+        <div class="hero-ctas">
+          <button class="btn-primary" onclick="smoothScroll('projects')">View My Work →</button>
+          <button class="btn-secondary" onclick="smoothScroll('contact')">Let's Connect</button>
+        </div>
+      </div>
+
+      <!-- Right: Code Window -->
+      <div class="hero-right">
+        <div class="hero-code-window">
+          <div class="code-window-bar">
+            <div class="code-dots">
+              <span></span><span></span><span></span>
+            </div>
+            <span class="code-filename">divakar.py</span>
+          </div>
+          <div class="code-body">
+            <span class="code-line"><span class="ck">class</span> <span class="ca">BasaDivakarReddy</span>:</span>
+            <span class="code-line cm">&nbsp;&nbsp;&nbsp;</span>
+            <span class="code-line">&nbsp;&nbsp;<span class="ck">def</span> <span class="cf">__init__</span>(<span class="ca">self</span>):</span>
+            <span class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="ca">self</span>.name = <span class="cs">"Basa Divakar Reddy"</span></span>
+            <span class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="ca">self</span>.role = <span class="cs">"Full Stack Developer"</span></span>
+            <span class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="ca">self</span>.languages = [</span>
+            <span class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs">"Python"</span>, <span class="cs">"JavaScript"</span>,</span>
+            <span class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs">"React"</span>, <span class="cs">"Node.js"</span></span>
+            <span class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;]</span>
+            <span class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="ca">self</span>.passion = <span class="cs">"Building AI solutions"</span></span>
+            <span class="code-line cm">&nbsp;&nbsp;&nbsp;</span>
+            <span class="code-line">&nbsp;&nbsp;<span class="ck">def</span> <span class="cf">get_goal</span>(<span class="ca">self</span>):</span>
+            <span class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="ck">return</span> <span class="cs">"Apply intelligent solutions</span></span>
+            <span class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs">to real-world problems"</span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about">
+    <div class="about-visual reveal">
+      <div class="about-avatar">
+        <div class="about-ring r1"></div>
+        <div class="about-ring r2"></div>
+        <div class="about-ring r3"></div>
+        <div class="avatar-orbit"></div>
+        <span class="avatar-initials">BDR</span>
+      </div>
+      <div class="about-stats">
+        <div class="stat-card">
+          <span class="stat-num">4</span>
+          <span class="stat-label">Projects</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-num">8+</span>
+          <span class="stat-label">Technologies</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-num">1+</span>
+          <span class="stat-label">Years Coding</span>
+        </div>
+      </div>
+    </div>
+    <div class="about-content reveal">
+      <h2>About <span class="accent">Me</span></h2>
+      <span class="section-divider"></span>
+      <p>
+        I'm <strong>Basa Divakar Reddy</strong>, a Full Stack Developer and B.Tech CSE (AI) student
+        from Visakhapatnam, India. I'm passionate about building intelligent, high-performance web
+        applications that blend creative design with real-world utility.
+      </p>
+      <p>
+        From crafting AI-powered crop diagnostics to building developer tools and interactive math
+        platforms — I love turning ambitious ideas into polished, deployable products. Every line of
+        code I write is driven by curiosity and a hunger to keep levelling up.
+      </p>
+      <div class="about-badges">
+        <span class="badge">🎓 B.Tech CSE (AI) — VIIT</span>
+        <span class="badge">📍 Visakhapatnam, India</span>
+        <span class="badge">🚀 Full Stack Developer</span>
+      </div>
+      <a href="assets/resume.pdf" class="btn-primary" download style="margin-top:1.8rem;display:inline-flex;">
+        Download Resume ↓
+      </a>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS ===== -->
+  <section id="skills">
+    <div class="section-header reveal">
+      <span class="section-tag">&lt;skills&gt;</span>
+      <h2>My <span class="accent">Skills</span></h2>
+      <span class="section-divider"></span>
+      <p>Technologies I work with to build full-stack, AI-powered applications.</p>
+    </div>
+    <div class="skills-container reveal">
+      
+      <!-- Frontend -->
+      <div class="skill-category-box">
+        <h3><span>✨</span> Frontend</h3>
+        <div class="skills-mini-grid">
+          <div class="skill-icon-card">
+            <i class="devicon-html5-plain colored"></i>
+            <span>HTML5</span>
+          </div>
+          <div class="skill-icon-card">
+            <i class="devicon-css3-plain colored"></i>
+            <span>CSS3</span>
+          </div>
+          <div class="skill-icon-card">
+            <i class="devicon-javascript-plain colored"></i>
+            <span>JavaScript</span>
+          </div>
+          <div class="skill-icon-card">
+            <i class="devicon-react-original colored"></i>
+            <span>React</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Backend -->
+      <div class="skill-category-box">
+        <h3><span>⚙️</span> Backend</h3>
+        <div class="skills-mini-grid">
+          <div class="skill-icon-card">
+            <i class="devicon-nodejs-plain colored"></i>
+            <span>Node.js</span>
+          </div>
+          <div class="skill-icon-card">
+            <i class="devicon-express-original"></i>
+            <span>Express.js</span>
+          </div>
+          <div class="skill-icon-card">
+            <span style="font-size: 2.2rem;">🤖</span>
+            <span>API Integration</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Applications and Tools -->
+      <div class="skill-category-box">
+        <h3><span>🛠️</span> Applications & Tools</h3>
+        <div class="skills-mini-grid">
+          <div class="skill-icon-card">
+            <span style="font-size: 2.2rem;">⚡</span>
+            <span>Antigravity</span>
+          </div>
+          <div class="skill-icon-card">
+            <i class="devicon-git-plain colored"></i>
+            <span>Git</span>
+          </div>
+          <div class="skill-icon-card">
+            <i class="devicon-github-original"></i>
+            <span>GitHub</span>
+          </div>
+          <div class="skill-icon-card">
+            <i class="devicon-vscode-plain colored"></i>
+            <span>VS Code</span>
+          </div>
+          <div class="skill-icon-card">
+            <span style="font-size: 2.2rem;">🧠</span>
+            <span>AI Studio</span>
+          </div>
+          <div class="skill-icon-card">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vercel/vercel-original.svg" alt="Vercel" style="width: 2.22rem; height: 2.22rem;">
+            <span>Vercel</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Languages -->
+      <div class="skill-category-box">
+        <h3><span>💻</span> Languages</h3>
+        <div class="skills-mini-grid">
+          <div class="skill-icon-card">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" style="width: 2.22rem; height: 2.22rem;">
+            <span>Python</span>
+          </div>
+          <div class="skill-icon-card">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" style="width: 2.22rem; height: 2.22rem;">
+            <span>Java</span>
+          </div>
+          <div class="skill-icon-card">
+            <i class="devicon-c-plain colored"></i>
+            <span>C</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS ===== -->
+  <section id="projects">
+    <div class="section-header reveal">
+      <span class="section-tag">✦ My Work</span>
+      <h2>Featured <span class="accent">Projects</span></h2>
+      <span class="section-divider"></span>
+      <p>Four real-world projects — AI, developer tools, edtech, and personal branding.</p>
+    </div>
+    <div class="featured-projects-list">
+
+      <!-- Crop Care AI -->
+      <div class="featured-project reveal alternate">
+        <div class="fp-image">
+          <img src="assets/img/projects/crop_care_ai_preview_1773925938461.png" alt="Crop Care AI Dashboard">
+          <div class="fp-glow"></div>
+        </div>
+        <div class="fp-content">
+          <span class="card-tag">AI / Agriculture</span>
+          <h3>Crop Care AI</h3>
+          <p>An intelligent platform that helps farmers diagnose crop diseases and get AI-powered care recommendations in real time — bridging technology and agriculture with precise data diagnostics.</p>
+          <div class="card-tech">
+            <span class="tech-pill">HTML5</span>
+            <span class="tech-pill">CSS3</span>
+            <span class="tech-pill">JavaScript</span>
+            <span class="tech-pill">AI API</span>
+          </div>
+          <div class="card-links">
+            <a class="card-link" href="https://github.com/basadivakarreddy-bit/agro-ai-helper-62" target="_blank" rel="noopener">GitHub ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Code Converter -->
+      <div class="featured-project reveal">
+        <div class="fp-content">
+          <span class="card-tag">Developer Tool</span>
+          <h3>Code Converter</h3>
+          <p>A multi-language AI-powered code translation tool — paste code in one language, get it instantly converted to another. Designed for seamless cross-platform logic migration.</p>
+          <div class="card-tech">
+            <span class="tech-pill">React</span>
+            <span class="tech-pill">Node.js</span>
+            <span class="tech-pill">Express.js</span>
+            <span class="tech-pill">API Integration</span>
+          </div>
+          <div class="card-links">
+            <a class="card-link" href="https://github.com/basadivakarreddy-bit/Code-Converter" target="_blank" rel="noopener">GitHub ↗</a>
+            <a class="card-link demo" href="https://code-conversion-ai-five.vercel.app/" target="_blank" rel="noopener">Live Link ↗</a>
+          </div>
+        </div>
+        <div class="fp-image">
+          <img src="assets/img/projects/code_converter_preview_1773925957416.png" alt="Code Converter UI">
+          <div class="fp-glow"></div>
+        </div>
+      </div>
+
+      <!-- Engineering Maths -->
+      <div class="featured-project reveal alternate">
+        <div class="fp-image">
+          <img src="assets/img/projects/engineering_maths_preview_1773925978014.png" alt="Engineering Maths AI Platform">
+          <div class="fp-glow"></div>
+        </div>
+        <div class="fp-content">
+          <span class="card-tag">EdTech / AI</span>
+          <h3>Engineering Maths</h3>
+          <p>An AI-enhanced interactive platform that teaches core engineering mathematics with conceptual clarity, featuring step-by-step walkthroughs and Google AI-powered deep explanations.</p>
+          <div class="card-tech">
+            <span class="tech-pill">React</span>
+            <span class="tech-pill">Google AI Studio</span>
+            <span class="tech-pill">JavaScript</span>
+            <span class="tech-pill">CSS3</span>
+          </div>
+          <div class="card-links">
+            <a class="card-link" href="https://github.com/basadivakarreddy-bit/engineering-math_-conceptual-clarity" target="_blank" rel="noopener">GitHub ↗</a>
+            <a class="card-link demo" href="https://engineeringmathsin.netlify.app" target="_blank" rel="noopener">Live Link ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Portfolio -->
+      <div class="featured-project reveal">
+        <div class="fp-content">
+          <span class="card-tag">Personal Branding</span>
+          <h3>My Portfolio</h3>
+          <p>A high-performance personal portfolio built from scratch — live particle systems, 3D card tilt, custom neon cursor, glitch animations, and zero frameworks. Pure engineering craft.</p>
+          <div class="card-tech">
+            <span class="tech-pill">HTML5</span>
+            <span class="tech-pill">CSS3</span>
+            <span class="tech-pill">JavaScript</span>
+            <span class="tech-pill">Canvas API</span>
+          </div>
+          <div class="card-links">
+            <a class="card-link demo" href="#">You're Here! ✓</a>
+          </div>
+        </div>
+        <div class="fp-image">
+          <img src="assets/img/projects/basa_divakar_reddy_portfolio_preview_1773931030276.png" alt="Portfolio Creative Preview">
+          <div class="fp-glow"></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== EDUCATION ===== -->
+  <section id="education">
+    <div class="section-header reveal">
+      <span class="section-tag">&lt;education&gt;</span>
+      <h2>My <span class="accent">Education</span></h2>
+      <span class="section-divider"></span>
+      <p>My academic path — from school to engineering AI.</p>
+    </div>
+    <div class="timeline">
+
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="timeline-line"></div>
+        <div class="timeline-card">
+          <span class="timeline-period">2024 — Present</span>
+          <h3>B.Tech — Computer Science &amp; Engineering <span class="accent">(AI)</span></h3>
+          <p class="timeline-institution">Vignan's Institution of Information Technology (VIIT)</p>
+          <p class="timeline-desc">Specializing in Artificial Intelligence — studying machine learning, deep learning, data structures, full-stack development, and building real-world AI applications.</p>
+          <span class="timeline-badge">🎓 Current</span>
+          <div class="edu-progress" style="--fill:100%"></div>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="timeline-line"></div>
+        <div class="timeline-card">
+          <span class="timeline-period">2022 — 2024</span>
+          <h3>Intermediate — MPC <span class="accent">(Grade 12)</span></h3>
+          <p class="timeline-institution">Sri Chaitanya Junior College</p>
+          <p class="timeline-desc">Completed Mathematics, Physics, and Chemistry — building strong analytical foundations that drive my engineering and problem-solving approach.</p>
+          <span class="timeline-badge">✅ Completed</span>
+          <div class="edu-progress" style="--fill:100%"></div>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <span class="timeline-period">2021 — 2022</span>
+          <h3>Secondary Education <span class="accent">(Grade 10)</span></h3>
+          <p class="timeline-institution">S.F.S School, Gajuwaka</p>
+          <p class="timeline-desc">Completed secondary schooling — developing curiosity, discipline, and a love for mathematics and science that sparked my passion for technology.</p>
+          <span class="timeline-badge">✅ Completed</span>
+          <div class="edu-progress" style="--fill:100%"></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact">
+    <h2 class="reveal">Let's <span class="accent">Connect</span></h2>
+    <span class="section-divider reveal" style="margin-bottom:1.6rem;"></span>
+    <p class="reveal contact-sub">Open to internships, full-time roles, freelance projects, and collaborations. Drop me a message — I reply fast.</p>
+
+    <div class="contact-wrapper">
+      <div class="contact-info reveal">
+        <div class="contact-info-card">
+          <span class="contact-info-icon">📧</span>
+          <div>
+            <span class="contact-info-label">Email</span>
+            <a href="mailto:basadivakarreddy@gmail.com" class="contact-info-value">basadivakarreddy@gmail.com</a>
+          </div>
+        </div>
+        <div class="contact-info-card">
+          <span class="contact-info-icon">📍</span>
+          <div>
+            <span class="contact-info-label">Location</span>
+            <span class="contact-info-value">Visakhapatnam, India</span>
+          </div>
+        </div>
+        <div class="contact-info-card">
+          <span class="contact-info-icon">🎓</span>
+          <div>
+            <span class="contact-info-label">Education</span>
+            <span class="contact-info-value">B.Tech CSE (AI) — VIIT</span>
+          </div>
+        </div>
+        <div class="contact-socials">
+          <a class="social-link" href="https://github.com/basadivakarreddy-bit" target="_blank" rel="noopener" aria-label="GitHub">
+            <i class="devicon-github-original"></i>
+          </a>
+          <a class="social-link" href="https://www.linkedin.com/in/basa-divakar-reddy-765321325/" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <i class="devicon-linkedin-plain colored"></i>
+          </a>
+          <a class="social-link" href="mailto:basadivakarreddy@gmail.com" aria-label="Email">
+            <span style="font-size:1.2rem;">✉</span>
+          </a>
+        </div>
+      </div>
+
+      <form class="contact-form contact-form-inner reveal" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="b640229d-a8ed-4d43-a0e8-6716c3e729b3">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fname">Your Name</label>
+            <input type="text" id="fname" name="name" placeholder="John Doe" required />
+          </div>
+          <div class="form-group">
+            <label for="femail">Email Address</label>
+            <input type="email" id="femail" name="email" placeholder="hello@example.com" required />
+          </div>
+        </div>
+        <div class="form-group full" style="margin-bottom:1.5rem;">
+          <label for="fsubject">Subject</label>
+          <input type="text" id="fsubject" name="subject" placeholder="Internship / Project Collaboration / Job Opportunity" />
+        </div>
+        <div class="form-group full" style="margin-bottom:1.5rem;">
+          <label for="fmessage">Message</label>
+          <textarea id="fmessage" name="message" placeholder="Tell me about your project or opportunity..." required></textarea>
+        </div>
+        <button type="submit" class="form-submit" id="submitBtn">Send Message →</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>Designed &amp; Built by <span class="accent">Basa Divakar Reddy</span> · Visakhapatnam, India · © 2025</p>
+    <p style="margin-top:0.4rem;font-size:0.75rem;">B.Tech CSE (AI) · VIIT · Full Stack Developer</p>
+  </footer>
+
+  <script src="js/theme.js"></script>
+  <script src="js/cursor.js"></script>
+  <script src="js/particles.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/tilt.js"></script>
+  <script src="js/form.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,173 @@
+/* ===== CUSTOM SCROLLBAR ===== */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--grad-main);
+  border-radius: 5px;
+  border: 2px solid var(--bg);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--cyan);
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--cyan) var(--bg);
+}
+
+/* ===== HERO ===== */
+#hero {
+  min-height: 100vh;
+  display: flex; align-items: center; justify-content: center;
+  padding: 8rem 2rem 5rem;
+  overflow: hidden; position: relative;
+}
+/* Ambient glow blobs */
+#hero::before {
+  content: ''; position: absolute; inset: 0; z-index: -1; pointer-events: none;
+  background:
+    radial-gradient(ellipse 70% 55% at 15% 45%, rgba(0,245,255,0.06)  0%, transparent 65%),
+    radial-gradient(ellipse 60% 55% at 85% 55%, rgba(139,92,246,0.12)  0%, transparent 65%),
+    radial-gradient(ellipse 50% 60% at 50% 90%, rgba(255,0,127,0.08)  0%, transparent 55%);
+}
+/* Star sparkles */
+#hero::after {
+  content: ''; position: absolute; inset: 0; z-index: -1; pointer-events: none;
+  background:
+    radial-gradient(1.5px 1.5px at 12% 22%, rgba(255,255,255,.7) 0%, transparent 100%),
+    radial-gradient(1.5px 1.5px at 28% 68%, rgba(255,255,255,.5) 0%, transparent 100%),
+    radial-gradient(1px   1px   at 72% 18%, rgba(255,255,255,.6) 0%, transparent 100%),
+    radial-gradient(1.5px 1.5px at 88% 82%, rgba(255,255,255,.4) 0%, transparent 100%),
+    radial-gradient(1px   1px   at 52% 92%, rgba(255,255,255,.5) 0%, transparent 100%),
+    radial-gradient(2px   2px   at 94% 10%, rgba(255,255,255,.8) 0%, transparent 100%),
+    radial-gradient(1px   1px   at 6%  88%, rgba(255,255,255,.5) 0%, transparent 100%);
+}
+
+/* Hero inner — split layout */
+.hero-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+.hero-left  { flex: 1; text-align: left; }
+.hero-right { flex: 0 0 auto; }
+
+/* Hero text */
+.hero-badge {
+  display: inline-flex; align-items: center; gap: .5rem;
+  padding: .38rem 1.2rem; border: 1px solid rgba(0,212,255,.3);
+  border-radius: var(--radius-pill); font-size: .72rem; letter-spacing: .16em;
+  text-transform: uppercase; color: var(--cyan); margin-bottom: 1.6rem;
+  background: rgba(0,212,255,.05); backdrop-filter: blur(8px);
+  box-shadow: 0 2px 20px rgba(0,212,255,.1);
+}
+.hero-badge::before {
+  content: ''; width: 6px; height: 6px; background: var(--cyan);
+  border-radius: 50%; animation: blink 1.4s ease infinite; box-shadow: 0 0 8px var(--cyan);
+}
+.hero-greeting {
+  font-size: 1rem; color: var(--muted2); letter-spacing: .14em;
+  margin-bottom: .5rem; text-transform: uppercase;
+}
+.hero-title {
+  font-family: var(--font-display); font-size: clamp(3.5rem,10vw,7rem);
+  font-weight: 700; line-height: 0.95; letter-spacing: -0.02em; margin-bottom: 1rem;
+}
+.hero-title .line1 { display: block; color: var(--text); }
+.hero-title .line2 {
+  display: block;
+  background: var(--grad-main);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+}
+.hero-role {
+  font-family: var(--font-display); font-size: clamp(1rem,2.5vw,1.38rem);
+  color: var(--muted2); letter-spacing: .12em; margin-bottom: 1.5rem; height: 2.2rem;
+}
+.role-text {
+  background: linear-gradient(90deg, #3AA0FF, #7B3FE4, #FF3FA4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+}
+.hero-sub { max-width: 500px; margin: 0 0 2.8rem; color: var(--muted2); font-size: 1rem; line-height: 1.85; }
+.hero-ctas { display: flex; gap: 1.2rem; flex-wrap: wrap; }
+
+/* Scroll hint */
+.scroll-hint {
+  position: absolute; bottom: 2.4rem; left: 50%; transform: translateX(-50%);
+  display: flex; flex-direction: column; align-items: center; gap: .55rem;
+}
+.scroll-hint span { font-size: .66rem; letter-spacing: .26em; color: var(--muted); text-transform: uppercase; }
+.scroll-line {
+  width: 1px; height: 42px;
+  background: linear-gradient(to bottom, transparent, var(--cyan), var(--purple));
+  animation: scrollPulse 2.4s ease-in-out infinite;
+}
+
+/* ===== ABOUT ===== */
+#about {
+  padding: 9rem 2rem; max-width: 1140px; margin: 0 auto;
+  display: grid; grid-template-columns: 1fr 1.45fr; gap: 6rem; align-items: center;
+}
+
+/* ===== SKILLS ===== */
+#skills { padding: 9rem 2rem; max-width: 1240px; margin: 0 auto; }
+
+/* ===== PROJECTS ===== */
+#projects { padding: 9rem 2rem; max-width: 1400px; margin: 0 auto; overflow: hidden; }
+.featured-projects-list { margin-top: 4rem; }
+
+/* ===== EDUCATION ===== */
+#education { padding: 9rem 2rem; max-width: 1120px; margin: 0 auto; }
+
+/* ===== CONTACT ===== */
+#contact { padding: 9rem 2rem; max-width: 1120px; margin: 0 auto; text-align: center; }
+#contact > h2 {
+  font-family: var(--font-display); font-size: clamp(2.3rem,5vw,3.5rem);
+  font-weight: 800; letter-spacing: .04em; margin-bottom: 1.1rem;
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width: 1024px) {
+  .hero-inner { flex-direction: column; text-align: center; gap: 3rem; }
+  .hero-left { text-align: center; }
+  .hero-sub { margin: 0 auto 2.8rem; }
+  .hero-ctas { justify-content: center; }
+  .hero-right { width: 100%; display: flex; justify-content: center; }
+  .hero-code-window { max-width: 460px; width: 100%; }
+}
+@media(max-width: 960px) {
+  #navbar { padding: 1rem 2rem; }
+  #navbar.scrolled { padding: .75rem 2rem; }
+  .nav-links { display: none; }
+  .nav-menu-btn { display: block; }
+  #about { grid-template-columns: 1fr; gap: 3.5rem; text-align: center; }
+  .about-badges { justify-content: center; }
+  .contact-wrapper { grid-template-columns: 1fr; }
+  .hero-title { font-size: clamp(2.4rem,10vw,5rem); }
+}
+@media(max-width: 600px) {
+  #navbar { padding: 1rem 1.25rem; }
+  .hero-title { font-size: clamp(2.2rem,12vw,3.8rem); }
+  .form-row { grid-template-columns: 1fr; }
+  .contact-form { padding: 1.8rem; }
+  #projects, #contact, #about, #skills, #education { padding: 6rem 1.25rem; }
+  .skills-categories { grid-template-columns: 1fr; }
+  .featured-project, .featured-project.alternate { flex-direction: column; text-align: center; gap: 2.5rem; }
+  .featured-project p, .featured-project.alternate p { margin-left: 0; width: 100%; margin: 0 auto 2rem; text-align: center; }
+  .fp-image { width: 100%; }
+  .hero-code-window { font-size: .75rem; min-width: unset; }
+}
