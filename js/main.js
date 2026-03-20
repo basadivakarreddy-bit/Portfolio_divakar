@@ -17,11 +17,18 @@ const secObs = new IntersectionObserver(entries=>{
   entries.forEach(e=>{
     if(e.isIntersecting){
       navLinks.forEach(l => {
-        l.style.color = l.getAttribute('href') === '#' + e.target.id ? 'var(--cyan)' : '';
+        const href = l.getAttribute('href');
+        if (href === '#' + e.target.id) {
+          l.classList.add('active');
+          l.style.color = 'var(--cyan)';
+        } else {
+          l.classList.remove('active');
+          l.style.color = '';
+        }
       });
     }
   });
-},{threshold:.45});
+},{threshold:0.22}); // Lower threshold for better sensitivity on long sections
 sections.forEach(s=>secObs.observe(s));
 
 // Mobile menu
