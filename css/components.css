@@ -21,7 +21,7 @@ body::before {
 }
 
 /* ===== CUSTOM CURSOR ===== */
-body { cursor: none; }
+
 #cursor {
   position: fixed; width: 10px; height: 10px;
   background: var(--cyan); border-radius: 50%;
@@ -73,14 +73,14 @@ body.cursor-click #cursor-trail { width: 64px; height: 64px; }
 }
 .nav-logo {
   font-family: var(--font-display); font-size: 1.4rem; font-weight: 800;
-  letter-spacing: .06em; cursor: none;
+  letter-spacing: .06em;
   color: var(--text);
 }
 .nav-logo .bracket { -webkit-text-fill-color: var(--cyan); }
 .nav-links { display: flex; gap: 2.2rem; }
 .nav-links a {
   color: var(--muted); font-size: .78rem; letter-spacing: .14em; text-transform: uppercase;
-  transition: color .25s; position: relative; cursor: none; font-weight: 500;
+  transition: color .25s; position: relative; font-weight: 500;
 }
 .nav-links a::after {
   content: ''; position: absolute; bottom: -5px; left: 0; width: 0; height: 1.5px;
@@ -90,7 +90,7 @@ body.cursor-click #cursor-trail { width: 64px; height: 64px; }
 .nav-links a:hover { color: var(--text); }
 .nav-links a:hover::after, .nav-links a.active::after { width: 100%; }
 .nav-links a.active { color: var(--cyan); }
-.nav-menu-btn { display: none; color: var(--cyan); font-size: 1.5rem; cursor: none; background: none; border: none; }
+.nav-menu-btn { display: none; color: var(--cyan); font-size: 1.5rem; background: none; border: none; }
 .mobile-menu {
   display: none; position: fixed; top: 64px; left: 0; right: 0;
   background: rgba(11,13,23,0.98); backdrop-filter: blur(28px);
@@ -111,7 +111,7 @@ body.cursor-click #cursor-trail { width: 64px; height: 64px; }
   background-size: 200% auto;
   border: none; color: #fff;
   font-family: var(--font-body); font-size: .88rem; font-weight: 600;
-  letter-spacing: .1em; text-transform: uppercase; cursor: none;
+  letter-spacing: .1em; text-transform: uppercase;
   border-radius: var(--radius-pill); position: relative; overflow: hidden;
   transition: background-position .6s ease, box-shadow .35s ease, transform .25s ease;
   box-shadow: 0 4px 20px rgba(0,212,255,0.25);
@@ -126,7 +126,7 @@ body.cursor-click #cursor-trail { width: 64px; height: 64px; }
   padding: .9rem 2.6rem; background: transparent;
   border: 1.5px solid rgba(255,255,255,0.22); color: var(--text);
   font-family: var(--font-body); font-size: .88rem; font-weight: 500;
-  letter-spacing: .1em; text-transform: uppercase; cursor: none;
+  letter-spacing: .1em; text-transform: uppercase;
   border-radius: var(--radius-pill); transition: all .35s ease;
 }
 .btn-secondary:hover {
@@ -503,7 +503,7 @@ body.light-mode .theme-btn { background: rgba(0,0,0,0.05); }
   padding: 2.5rem; position: relative; overflow: hidden;
   transform-style: preserve-3d;
   transition: transform .18s ease, box-shadow .38s ease, border-color .38s;
-  cursor: none;
+  /* cursor removed */
 }
 .project-card::before {
   content: ''; position: absolute; inset: 0;
@@ -750,7 +750,7 @@ a.contact-info-value:hover { color: var(--cyan); }
   background: var(--grad-main); background-size: 200% auto;
   border: none; color: #fff;
   font-family: var(--font-display); font-size: .85rem; letter-spacing: .18em; text-transform: uppercase;
-  cursor: none; border-radius: var(--radius-md); position: relative; overflow: hidden;
+  border-radius: var(--radius-md); position: relative; overflow: hidden;
   transition: background-position .6s ease, box-shadow .35s ease, transform .25s ease;
   box-shadow: 0 4px 20px rgba(0,212,255,.22);
 }
