@@ -216,15 +216,20 @@ body.cursor-click #cursor-trail { width: 64px; height: 64px; }
 .about-avatar {
   width: 270px; height: 270px; border-radius: 50%; background: var(--bg2);
   margin: 0 auto 2.5rem; display: flex; align-items: center; justify-content: center;
-  position: relative; animation: glowPulse 3.5s ease-in-out infinite;
+  position: relative;
 }
 .about-avatar::before {
   content: ''; position: absolute; inset: -3px; border-radius: 50%;
   background: conic-gradient(var(--cyan) 0%, var(--purple) 33%, var(--pink) 66%, var(--cyan) 100%);
   z-index: -1; animation: spinBorder 6s linear infinite;
 }
+.avatar-bg {
+  position: absolute; inset: 4px; border-radius: 50%; background: var(--bg2); z-index: 0;
+}
 .about-avatar::after {
-  content: ''; position: absolute; inset: 4px; border-radius: 50%; background: var(--bg2); z-index: 0;
+  content: ''; position: absolute; inset: 0; border-radius: 50%;
+  box-shadow: 0 0 45px rgba(0,212,255,.55), 0 0 90px rgba(124,58,237,.18);
+  z-index: -2; animation: glowPulse 3.5s ease-in-out infinite;
 }
 .avatar-initials {
   font-family: var(--font-display); font-size: 2.8rem; font-weight: 800;

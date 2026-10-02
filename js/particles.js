@@ -47,6 +47,11 @@ const P = Array.from({ length: 200 }, () => {
 });
 
 function draw(time) {
+  if (window.innerWidth <= 768) {
+    ctx.clearRect(0, 0, width, height);
+    requestAnimationFrame((t) => draw(t));
+    return;
+  }
   ctx.clearRect(0, 0, width, height);
   
   P.forEach((p, i) => {

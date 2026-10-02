@@ -2,13 +2,13 @@
 @keyframes fadeSlideDown  { from{opacity:0;transform:translateY(-30px)} to{opacity:1;transform:translateY(0)} }
 @keyframes fadeSlideUp    { from{opacity:0;transform:translateY(40px)}  to{opacity:1;transform:translateY(0)} }
 @keyframes fadeIn         { from{opacity:0} to{opacity:1} }
-@keyframes scrollPulse    { 0%,100%{opacity:.3;height:36px} 50%{opacity:1;height:54px} }
+@keyframes scrollPulse    { 0%,100%{opacity:.3;transform:scaleY(0.66)} 50%{opacity:1;transform:scaleY(1)} }
 @keyframes spinBorder     { to{transform:rotate(360deg)} }
 @keyframes spinBorderRev  { to{transform:rotate(-360deg)} }
 @keyframes pulseRing      { 0%,100%{transform:scale(1);opacity:.1}  50%{transform:scale(1.09);opacity:.28} }
 @keyframes blink          { 0%,100%{opacity:1} 50%{opacity:0} }
 @keyframes iconFloat      { 0%,100%{transform:translateY(0) scale(1)} 50%{transform:translateY(-8px) scale(1.08)} }
-@keyframes glowPulse      { 0%,100%{box-shadow:0 0 14px rgba(0,212,255,.18)} 50%{box-shadow:0 0 45px rgba(0,212,255,.55),0 0 90px rgba(124,58,237,.18)} }
+@keyframes glowPulse      { 0%,100%{opacity:0.3} 50%{opacity:1} }
 @keyframes orbitDot       { from{transform:rotate(0deg) translateX(92px) rotate(0deg)} to{transform:rotate(360deg) translateX(92px) rotate(-360deg)} }
 @keyframes shimmer        { 0%{background-position:-300% center} 100%{background-position:300% center} }
 @keyframes gradMove       { 0%{background-position:0% 50%} 50%{background-position:100% 50%} 100%{background-position:0% 50%} }

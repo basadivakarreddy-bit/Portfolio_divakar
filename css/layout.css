@@ -112,7 +112,7 @@
 }
 .scroll-hint span { font-size: .66rem; letter-spacing: .26em; color: var(--muted); text-transform: uppercase; }
 .scroll-line {
-  width: 1px; height: 42px;
+  width: 1px; height: 54px; transform-origin: top;
   background: linear-gradient(to bottom, transparent, var(--cyan), var(--purple));
   animation: scrollPulse 2.4s ease-in-out infinite;
 }
